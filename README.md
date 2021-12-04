@@ -8,7 +8,7 @@
 ## Downloading
 
 ```
-git clone {repository URL}
+git clone https://github.com/Praddby/nodejs2021Q4-service.git
 ```
 
 ## Installing NPM modules
