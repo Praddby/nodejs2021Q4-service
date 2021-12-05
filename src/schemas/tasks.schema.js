@@ -2,7 +2,7 @@ const Task = {
   type: 'object',
   required: ['title', 'order', 'description', 'boardId'],
   properties: {
-    id: { type: 'string' },
+    id: { type: 'string', format: 'uuid' },
     title: { type: 'string' },
     order: { type: 'number' },
     description: { type: 'string' },

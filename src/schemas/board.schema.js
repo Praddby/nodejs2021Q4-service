@@ -4,7 +4,7 @@ const Board = {
   type: 'object',
   required: ['title'],
   properties: {
-    id: { type: 'string' },
+    id: { type: 'string', format: 'uuid' },
     title: { type: 'string' },
     columns: {
       type: 'array',
