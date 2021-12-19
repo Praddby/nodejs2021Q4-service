@@ -20,7 +20,7 @@ cd nodejs2021Q4-service/
 ## Switch branch
 
 ```
-git checkout rest-service
+git checkout typescript-basics
 ```
 
 ## Installing NPM modules
