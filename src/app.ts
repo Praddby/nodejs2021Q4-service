@@ -7,6 +7,11 @@ const app = fastify({
   logger: true,
 });
 
+/**
+ * FastifyRegister
+ *
+ * Function for adding a swagger to fastify. 
+ */
 app.register(SwaggerPlugin, {
   exposeRoute: true,
   routePrefix: '/docs',
@@ -18,6 +23,11 @@ app.register(SwaggerPlugin, {
   },
 });
 
+/**
+ * FastifyRegister
+ *
+ * Function for adding a routes to fastify. 
+ */
 app.register(autoLoad, {
   dir: join(__dirname, 'routes'),
   dirNameRoutePrefix: false,
