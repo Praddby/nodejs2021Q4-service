@@ -8,7 +8,19 @@
 ## Downloading
 
 ```
-git clone {repository URL}
+git clone https://github.com/Praddby/nodejs2021Q4-service.git
+```
+
+## Enter the desired folder
+
+```
+cd nodejs2021Q4-service/
+```
+
+## Switch branch
+
+```
+git checkout rest-service
 ```
 
 ## Installing NPM modules
