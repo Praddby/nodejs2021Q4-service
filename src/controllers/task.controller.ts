@@ -8,6 +8,14 @@ interface IParams {
 }
 
 export class TaskController {
+  
+  /**
+  * Send array Task.
+  *
+  * @param request - FastifyRequest is an instance of the standard http or http2 request objects, FastifyRequest
+  * @param reply - FastifyReply is an instance of the standard http or http2 reply types., FastifyReply
+  * 
+  */
   public static getAll = async (request: FastifyRequest<{ Params: IParams }>, reply: FastifyReply) => {
     const { boardId } = request.params;
 
@@ -16,6 +24,13 @@ export class TaskController {
     reply.send(tasks);
   };
 
+  /**
+  * Send one Task by id.
+  *
+  * @param request - FastifyRequest is an instance of the standard http or http2 request objects, FastifyRequest
+  * @param reply - FastifyReply is an instance of the standard http or http2 reply types., FastifyReply
+  * 
+  */
   public static getOne = async (request: FastifyRequest<{ Params: IParams }>, reply: FastifyReply) => {
     const { taskId } = request.params;
 
@@ -31,6 +46,13 @@ export class TaskController {
     reply.send(task);
   };
 
+  /**
+  * Send new Task and code 201.
+  *
+  * @param request - FastifyRequest is an instance of the standard http or http2 request objects, FastifyRequest
+  * @param reply - FastifyReply is an instance of the standard http or http2 reply types., FastifyReply
+  * 
+  */
   public static create = async (request: FastifyRequest<{ Params: IParams, Body: ITask }>, reply: FastifyReply) => {
     const { boardId } = request.params;
 
@@ -39,6 +61,13 @@ export class TaskController {
     reply.code(201).send(task);
   };
 
+  /**
+  * Send update Task by id.
+  *
+  * @param request - FastifyRequest is an instance of the standard http or http2 request objects, FastifyRequest
+  * @param reply - FastifyReply is an instance of the standard http or http2 reply types., FastifyReply
+  * 
+  */
   public static update = async (request: FastifyRequest<{ Params: IParams, Body: ITask }>, reply: FastifyReply) => {
     const { taskId } = request.params;
 
@@ -54,6 +83,13 @@ export class TaskController {
     reply.send(task);
   };
 
+  /**
+  * Delete Task by id, and send code 204.
+  *
+  * @param request - FastifyRequest is an instance of the standard http or http2 request objects, FastifyRequest
+  * @param reply - FastifyReply is an instance of the standard http or http2 reply types., FastifyReply
+  * 
+  */
   public static destroy = async (request: FastifyRequest<{ Params: IParams }>, reply: FastifyReply) => {
     const { taskId } = request.params;
 

@@ -7,12 +7,27 @@ interface IParams {
 }
 
 export class BoardController {
+
+  /**
+  * Send array Board.
+  *
+  * @param request - FastifyRequest is an instance of the standard http or http2 request objects, FastifyRequest
+  * @param reply - FastifyReply is an instance of the standard http or http2 reply types., FastifyReply
+  * 
+  */
   public static getAll = async (request: FastifyRequest, reply: FastifyReply): Promise<void> => {
     const boards = await BoardService.getAll();
 
     reply.send(boards);
   };
 
+  /**
+  * Send one Board by id.
+  *
+  * @param request - FastifyRequest is an instance of the standard http or http2 request objects, FastifyRequest
+  * @param reply - FastifyReply is an instance of the standard http or http2 reply types., FastifyReply
+  * 
+  */
   public static getOne = async (
     request: FastifyRequest<{ Params: IParams }>, 
     reply: FastifyReply,
@@ -31,6 +46,13 @@ export class BoardController {
     reply.send(board);
   };
 
+  /**
+  * Send new Board and code 201.
+  *
+  * @param request - FastifyRequest is an instance of the standard http or http2 request objects, FastifyRequest
+  * @param reply - FastifyReply is an instance of the standard http or http2 reply types., FastifyReply
+  * 
+  */
   public static create = async (
     request: FastifyRequest<{ Body: IBoard }>,
     reply: FastifyReply,
@@ -40,6 +62,13 @@ export class BoardController {
     reply.code(201).send(board);
   };
 
+  /**
+  * Send update Board by id.
+  *
+  * @param request - FastifyRequest is an instance of the standard http or http2 request objects, FastifyRequest
+  * @param reply - FastifyReply is an instance of the standard http or http2 reply types., FastifyReply
+  * 
+  */
   public static update = async (
     request: FastifyRequest<{ Params: IParams, Body: IBoard }>,
     reply: FastifyReply,
@@ -58,6 +87,13 @@ export class BoardController {
     reply.send(board);
   };
 
+  /**
+  * Delete Board and all task of this board, and send code 204.
+  *
+  * @param request - FastifyRequest is an instance of the standard http or http2 request objects, FastifyRequest
+  * @param reply - FastifyReply is an instance of the standard http or http2 reply types., FastifyReply
+  * 
+  */
   public static destroy = async (
     request: FastifyRequest<{ Params: IParams }>,
     reply: FastifyReply,
