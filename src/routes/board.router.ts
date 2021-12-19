@@ -3,7 +3,7 @@ import { BoardController } from '../controllers';
 import { BoardSchema } from '../schemas';
 
 /**
-  * API for url '/boards'.
+  * Fastify Router Shorthand method type that is similar to the Express/Restify approach
   *
   * @param fastify - FastifyRequest is an instance of the standard http or http2 request objects, FastifyInstance
   * 

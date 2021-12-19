@@ -3,7 +3,7 @@ import { UserController } from '../controllers';
 import { UserSchema } from '../schemas';
 
 /**
-  * API for url '/users'.
+  * Fastify Router Shorthand method type that is similar to the Express/Restify approach
   *
   * @param fastify - FastifyRequest is an instance of the standard http or http2 request objects, FastifyInstance
   * 

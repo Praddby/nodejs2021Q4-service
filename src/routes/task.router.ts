@@ -3,7 +3,7 @@ import { TaskController } from '../controllers';
 import { TaskSchema } from '../schemas';
 
 /**
-  * API for url '/boards/:boardId/tasks'.
+  * Fastify Router Shorthand method type that is similar to the Express/Restify approach
   *
   * @param fastify - FastifyRequest is an instance of the standard http or http2 request objects, FastifyInstance
   * 
